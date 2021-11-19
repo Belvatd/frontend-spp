@@ -6,6 +6,7 @@ import PrivateRoute from './router/privateRouter';
 
 import Dashboard from './container/page/Dashboard';
 import Login from './container/page/Login';
+import NotFound from './container/page/NotFound';
 
 import ROUTES from './config/routes';
 class App extends Component {
@@ -23,6 +24,11 @@ class App extends Component {
             restricted={true}
             path={ROUTES.LOGIN}
             component={Login}
+          />
+          <PublicRoute
+            exact
+            path={ROUTES.PAGE_NOT_FOUND}
+            component={NotFound}
           />
         </Switch>
       </Router>
